@@ -18,4 +18,4 @@ phases:
       - docker-compose --file=docker-compose.yml push
 artifacts:
     files: 
-      - 'docker-compose-up.yml'
+      - **/*
