@@ -14,7 +14,7 @@ services:
     image: 073645649421.dkr.ecr.eu-central-1.amazonaws.com/slikk-podms-api
     ports: 
       - "3000:3000"
-  nginx: 
+  slikk-nginx-api: 
     container_name: slikk-nginx-api
     depends_on: 
       - slikk-podms-api
