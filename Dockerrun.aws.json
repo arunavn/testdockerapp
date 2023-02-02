@@ -1,0 +1,45 @@
+{
+  "AWSEBDockerrunVersion": 3,
+  "containerDefinitions": [
+    {
+      "name": "slikk-authms-api",
+      "image": "073645649421.dkr.ecr.eu-central-1.amazonaws.com/slikk-authms-api",
+      "hostname": "slikk-authms-api",
+      "essential": true,
+      "memory": 200,
+      "portMappings": [
+        {
+          "hostPort": 5001,
+          "containerPort": 5001
+        }
+      ]
+    },
+    {
+      "name": "slikk-podms-api",
+      "image": "073645649421.dkr.ecr.eu-central-1.amazonaws.com/slikk-podms-api",
+      "hostname": "slikk-podms-api",
+      "essential": true,
+      "memory": 200,
+      "portMappings": [
+        {
+          "hostPort": 3000,
+          "containerPort": 3000
+        }
+      ]
+    },
+    {
+      "name": "slikk-nginx-api",
+      "image": "073645649421.dkr.ecr.eu-central-1.amazonaws.com/slikk-nginx-api",
+      "hostname": "slikk-nginx-api",
+      "essential": true,
+      "portMappings": [ 
+        {
+          "hostPort": 80,
+          "containerPort": 80
+        }
+      ],
+      "links": ["slikk-authms-api", "slikk-authms-api"],
+      "memory": 200
+    }
+  ]
+}
