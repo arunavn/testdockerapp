@@ -13,7 +13,7 @@ phases:
       - docker-compose --file=docker-compose.yml build
   post_build:
     commands:
-      - echo Build completed on `date`
+      - echo Build completd on `date`
       - echo Pushing the Docker images....
       - docker-compose --file=docker-compose.yml push
 artifacts:
