@@ -21,6 +21,6 @@
     "env_dict": {
       "region": "eu-central-1",
       "ecrArn": "pod ms ecr arn"
-    },
+    }
   }
 }
