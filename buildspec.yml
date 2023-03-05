@@ -5,7 +5,8 @@ phases:
       - echo Logging in to Amazon ECR...
       - aws --version
       - python3 ./pipeline_config/scripts/add_env_variable.py
-      - printenv region
+      - eval 'echo "$REGION"'
+      - eval 'echo "$region"'
       - cat ./pipeline_config/test_file.yml
       - python3 ./pipeline_config/scripts/replace_token.py
       - echo replacing tokens
