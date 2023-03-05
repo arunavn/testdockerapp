@@ -18,7 +18,8 @@ def main():
 	global CONFIG_DICT
 	print(f"cwd: {os.getcwd()}")
 	print(CONFIG_DICT)
-	tokens = CONFIG_DICT['test']['config_dict']
+	env = sys.argv[0]
+	tokens = CONFIG_DICT[env]['config_dict']
 	token_updated = {}
 	for k, v in tokens.items():
 		token_updated[f"#<{k}>#"] = v
