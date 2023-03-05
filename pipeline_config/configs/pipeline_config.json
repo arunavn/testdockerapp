@@ -1,6 +1,6 @@
 {
 "replaceFileList": [
-    "./pipeline_config/scripts/pipeline_config"
+    "./pipeline_config/test_file.yml"
     ]
 
 }
