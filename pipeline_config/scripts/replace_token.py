@@ -1,6 +1,7 @@
 import re
 import json
 import os
+import sys
 with open('./pipeline_config/configs/pipeline_config.json', 'r') as f:
 	CONFIG_DICT = json.load(f)
 
