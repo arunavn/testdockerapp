@@ -19,9 +19,12 @@ def main():
 	print(f"cwd: {os.getcwd()}")
 	print(CONFIG_DICT)
 	tokens = CONFIG_DICT['test']['config_dict']
-	s_regex=re.compile("|".join([r"#<{}>#".format(t) for t in tokens]))
+	token_updated = {}
+	fot k, v in token.items():
+		token_updated[f"#<{k}>#"] = v
+	s_regex=re.compile("|".join([r"{}".format(t) for t in token_updated]))
 	for f_path in CONFIG_DICT['replaceFileList']:
-		replacetext(s_regex= s_regex, file_path= f_path, replace_dicts= tokens)
+		replacetext(s_regex= s_regex, file_path= f_path, replace_dicts= token_updated)
 	  
 
 if __name__ == '__main__':
