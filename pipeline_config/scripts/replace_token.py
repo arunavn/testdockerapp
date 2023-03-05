@@ -18,7 +18,6 @@ def replacetext(s_regex, file_path):
 def main():
 	global CONFIG_DICT
 	print(f"cwd: {os.getcwd()}")
-	print(f"cwd: {os.getpwd()}")
 	print(CONFIG_DICT)
 	tokens = {'hello': 'world'}
 	s_regex=re.compile("|".join([r"#<{}>".format(t) for t in tokens]))
