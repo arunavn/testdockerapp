@@ -4,7 +4,7 @@ with open('./pipeline_config/configs/pipeline_config.json', 'r') as f:
 	CONFIG_DICT = json.load(f)
 
 def set_all_variables(env_dict):
-	for k,v in env_dict:
+	for k,v in env_dict.items():
 		os.environ[k] = str(v)	
 
 def main():
