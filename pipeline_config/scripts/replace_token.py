@@ -1,6 +1,7 @@
 import re
 import json
 import os
+import sys
 with open('./pipeline_config/configs/pipeline_config.json', 'r') as f:
 	CONFIG_DICT = json.load(f)
 
@@ -16,9 +17,9 @@ def replacetext(s_regex, file_path, replace_dicts):
 
 def main():
 	global CONFIG_DICT
-	print(f"cwd: {os.getcwd()}")
-	print(CONFIG_DICT)
-	tokens = CONFIG_DICT['test']['config_dict']
+	env = sys.argv[1]
+	print(env)
+	tokens = CONFIG_DICT[env]['config_dict']
 	token_updated = {}
 	for k, v in tokens.items():
 		token_updated[f"#<{k}>#"] = v
