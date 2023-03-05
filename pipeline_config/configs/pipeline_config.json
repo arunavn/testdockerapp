@@ -10,8 +10,8 @@
   },
   "prod": {
     "config_dict": {
-      "slikkAuthmsApiEcrRepo": "auth ms repo arn",
-      "slikkPodmsApiEcrRepo": "pod ms repo arn"
+      "slikkAuthmsApiEcrRepo": "auth ms repo arn - prod",
+      "slikkPodmsApiEcrRepo": "pod ms repo arn - prod"
     }
   }
 }
