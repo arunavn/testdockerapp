@@ -16,8 +16,6 @@ def replacetext(s_regex, file_path, replace_dicts):
 
 def main():
 	global CONFIG_DICT
-	print(f"cwd: {os.getcwd()}")
-	print(CONFIG_DICT)
 	env = sys.argv[0]
 	tokens = CONFIG_DICT[env]['config_dict']
 	token_updated = {}
