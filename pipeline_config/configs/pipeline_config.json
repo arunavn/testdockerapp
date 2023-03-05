@@ -6,10 +6,6 @@
     "config_dict": {
       "slikkAuthmsApiEcrRepo": "auth ms repo arn",
       "slikkPodmsApiEcrRepo": "pod ms repo arn"
-    },
-    "env_dict": {
-      "REGION": "us-west-2",
-      "ecrArn": "pod ms ecr arn"
     }
     
   },
@@ -17,10 +13,6 @@
     "config_dict": {
       "slikkAuthmsApiEcrRepo": "auth ms repo arn - prod",
       "slikkPodmsApiEcrRepo": "pod ms repo arn - prod"
-    },
-    "env_dict": {
-      "REGION": "eu-central-1",
-      "ecrArn": "pod ms ecr arn"
     }
   }
 }
