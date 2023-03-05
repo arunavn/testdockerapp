@@ -20,7 +20,7 @@ def main():
 	print(CONFIG_DICT)
 	tokens = CONFIG_DICT['test']['config_dict']
 	token_updated = {}
-	fot k, v in token.items():
+	for k, v in token.items():
 		token_updated[f"#<{k}>#"] = v
 	s_regex=re.compile("|".join([r"{}".format(t) for t in token_updated]))
 	for f_path in CONFIG_DICT['replaceFileList']:
